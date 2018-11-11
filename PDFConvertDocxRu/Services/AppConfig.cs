@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -18,24 +19,30 @@ namespace PDFConvertDocxRu.Services
         // прочитать настройки из config-файла
         public static void ReadValues()
         {
-            InFolderDefault = getCfgFolder("InFolderDefault", @"\inFolder");
-            OutFolderDefault = getCfgFolder("OutFolderDefault", @"\outFolder");
+            InFolderDefault = getCfgFolder("InFolderDefault", @"inFolder");
+            OutFolderDefault = getCfgFolder("OutFolderDefault", @"outFolder");
             IsOpenOutfile = GetBoolValue("IsOpenOutfile");
         }
 
         private static string getCfgFolder(string key, string defaultValue)
         {
             string sVal = ConfigurationManager.AppSettings[key];
-            if (InFolderDefault.IsNull()) sVal = defaultValue;
+            if (sVal.IsNull()) sVal = defaultValue;
 
             // относительный путь
-            if (System.IO.Directory.Exists(sVal) == false)
+            DirectoryInfo dirInfo = new DirectoryInfo(sVal);
+            if (dirInfo.Exists == false)
             {
                 string parentDir = Application.StartupPath;
                 if (!parentDir.EndsWith("\\")) parentDir += "\\";
 
                 sVal = parentDir + sVal;
             }
+            else
+            {
+                sVal = dirInfo.FullName;
+            }
+
             return sVal;
         }
 

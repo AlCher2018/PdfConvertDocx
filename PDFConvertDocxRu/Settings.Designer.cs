@@ -35,10 +35,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxInFilesFolder = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.checkBoxIsOpenOutFile = new System.Windows.Forms.CheckBox();
-            this.cmdAssocToPdf = new System.Windows.Forms.Button();
             this.cmdSelectFolderInFiles = new System.Windows.Forms.Button();
             this.cmdSelectFolderOutFiles = new System.Windows.Forms.Button();
+            this.checkBoxIsOpenOutFile = new System.Windows.Forms.CheckBox();
+            this.cmdAssocToPdf = new System.Windows.Forms.Button();
             this.textBoxOutFilesFolder = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -46,21 +46,22 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.panel1.Controls.Add(this.cmdCancel);
             this.panel1.Controls.Add(this.cmdOk);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 227);
+            this.panel1.Location = new System.Drawing.Point(0, 234);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(384, 50);
+            this.panel1.Size = new System.Drawing.Size(384, 43);
             this.panel1.TabIndex = 0;
             // 
             // cmdCancel
             // 
             this.cmdCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmdCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cmdCancel.Location = new System.Drawing.Point(297, 15);
+            this.cmdCancel.Location = new System.Drawing.Point(297, 9);
             this.cmdCancel.Name = "cmdCancel";
-            this.cmdCancel.Size = new System.Drawing.Size(75, 23);
+            this.cmdCancel.Size = new System.Drawing.Size(74, 26);
             this.cmdCancel.TabIndex = 2;
             this.cmdCancel.Text = "Cancel";
             this.cmdCancel.UseVisualStyleBackColor = true;
@@ -69,9 +70,9 @@
             // 
             this.cmdOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmdOk.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.cmdOk.Location = new System.Drawing.Point(200, 15);
+            this.cmdOk.Location = new System.Drawing.Point(200, 9);
             this.cmdOk.Name = "cmdOk";
-            this.cmdOk.Size = new System.Drawing.Size(75, 23);
+            this.cmdOk.Size = new System.Drawing.Size(74, 26);
             this.cmdOk.TabIndex = 0;
             this.cmdOk.Text = "Ok";
             this.cmdOk.UseVisualStyleBackColor = true;
@@ -94,27 +95,6 @@
             this.textBoxInFilesFolder.Name = "textBoxInFilesFolder";
             this.textBoxInFilesFolder.Size = new System.Drawing.Size(334, 20);
             this.textBoxInFilesFolder.TabIndex = 2;
-            // 
-            // checkBoxIsOpenOutFile
-            // 
-            this.checkBoxIsOpenOutFile.AutoSize = true;
-            this.checkBoxIsOpenOutFile.Location = new System.Drawing.Point(25, 142);
-            this.checkBoxIsOpenOutFile.Name = "checkBoxIsOpenOutFile";
-            this.checkBoxIsOpenOutFile.Size = new System.Drawing.Size(270, 17);
-            this.checkBoxIsOpenOutFile.TabIndex = 4;
-            this.checkBoxIsOpenOutFile.Text = "открывать ли docx-файл после преобразования";
-            this.checkBoxIsOpenOutFile.UseVisualStyleBackColor = true;
-            // 
-            // cmdAssocToPdf
-            // 
-            this.cmdAssocToPdf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cmdAssocToPdf.Location = new System.Drawing.Point(13, 183);
-            this.cmdAssocToPdf.Name = "cmdAssocToPdf";
-            this.cmdAssocToPdf.Size = new System.Drawing.Size(214, 26);
-            this.cmdAssocToPdf.TabIndex = 5;
-            this.cmdAssocToPdf.Text = "Привязать PDF к данной проге";
-            this.cmdAssocToPdf.UseVisualStyleBackColor = true;
-            this.cmdAssocToPdf.Click += new System.EventHandler(this.cmdAssocToPdf_Click);
             // 
             // cmdSelectFolderInFiles
             // 
@@ -141,6 +121,27 @@
             this.toolTip1.SetToolTip(this.cmdSelectFolderOutFiles, "select folder");
             this.cmdSelectFolderOutFiles.UseVisualStyleBackColor = true;
             this.cmdSelectFolderOutFiles.Click += new System.EventHandler(this.cmdSelectFolderOutFiles_Click);
+            // 
+            // checkBoxIsOpenOutFile
+            // 
+            this.checkBoxIsOpenOutFile.AutoSize = true;
+            this.checkBoxIsOpenOutFile.Location = new System.Drawing.Point(25, 142);
+            this.checkBoxIsOpenOutFile.Name = "checkBoxIsOpenOutFile";
+            this.checkBoxIsOpenOutFile.Size = new System.Drawing.Size(270, 17);
+            this.checkBoxIsOpenOutFile.TabIndex = 4;
+            this.checkBoxIsOpenOutFile.Text = "открывать ли docx-файл после преобразования";
+            this.checkBoxIsOpenOutFile.UseVisualStyleBackColor = true;
+            // 
+            // cmdAssocToPdf
+            // 
+            this.cmdAssocToPdf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cmdAssocToPdf.Location = new System.Drawing.Point(13, 183);
+            this.cmdAssocToPdf.Name = "cmdAssocToPdf";
+            this.cmdAssocToPdf.Size = new System.Drawing.Size(214, 26);
+            this.cmdAssocToPdf.TabIndex = 5;
+            this.cmdAssocToPdf.Text = "Привязать PDF к данной проге";
+            this.cmdAssocToPdf.UseVisualStyleBackColor = true;
+            this.cmdAssocToPdf.Click += new System.EventHandler(this.cmdAssocToPdf_Click);
             // 
             // textBoxOutFilesFolder
             // 

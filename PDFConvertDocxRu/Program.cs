@@ -14,9 +14,11 @@ namespace PDFConvertDocxRu
         [STAThread]
         static void Main()
         {
+            AppConfig.ReadValues();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new MainForm());
         }
     }
 }
