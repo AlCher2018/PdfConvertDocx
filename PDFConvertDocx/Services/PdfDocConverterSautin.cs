@@ -12,7 +12,7 @@ namespace PDFConvertDocxRu.Services
     {
         #region inmplement IPdfDocConverter
         public string PdfFilePath { get; set; }
-        public string DocFilePath { get; private set; }
+        public string DocFilePath { get; set; }
         public bool IsOpenAfterConverting { get; set; }
         public string ErrorMessage { get; private set; }
 
@@ -59,7 +59,8 @@ namespace PDFConvertDocxRu.Services
 
             DateTime dt = DateTime.MinValue;
             System.IO.FileInfo fileInfo = new System.IO.FileInfo(this.PdfFilePath);
-            string dir = fileInfo.DirectoryName; if (!dir.EndsWith(@"\")) dir += @"\";
+            string dir = (string.IsNullOrEmpty(DocFilePath) ? fileInfo.DirectoryName : DocFilePath);
+            if (!dir.EndsWith(@"\")) dir += @"\";
             string name = fileInfo.Name.Replace(".pdf", "");  // get name only, without extension
             string outFile = dir + name + ".docx";
 

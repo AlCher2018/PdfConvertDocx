@@ -9,7 +9,7 @@ namespace PDFConvertDocxRu.Services
         // полный путь к PDF-файлу (исходный файл)
         string PdfFilePath { get; set; }
         // полный путь к doc-файлу (результат)
-        string DocFilePath { get; }
+        string DocFilePath { get; set; }
 
         // окрывать ли результирующий файл в MS Word после конвертации
         bool IsOpenAfterConverting { get; set; }
