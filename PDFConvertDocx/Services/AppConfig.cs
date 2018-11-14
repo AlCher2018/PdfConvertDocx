@@ -8,7 +8,6 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
-
 namespace PDFConvertDocxRu.Services
 {
     public static class AppConfig

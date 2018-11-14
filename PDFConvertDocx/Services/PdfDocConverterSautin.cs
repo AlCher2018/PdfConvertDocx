@@ -13,6 +13,7 @@ namespace PDFConvertDocxRu.Services
         #region inmplement IPdfDocConverter
         public string PdfFilePath { get; set; }
         public string DocFilePath { get; set; }
+        public string DocFileFullName { get; private set; }
         public bool IsOpenAfterConverting { get; set; }
         public string ErrorMessage { get; private set; }
 
@@ -62,7 +63,7 @@ namespace PDFConvertDocxRu.Services
             string dir = (string.IsNullOrEmpty(DocFilePath) ? fileInfo.DirectoryName : DocFilePath);
             if (!dir.EndsWith(@"\")) dir += @"\";
             string name = fileInfo.Name.Replace(".pdf", "");  // get name only, without extension
-            string outFile = dir + name + ".docx";
+            DocFileFullName = dir + name + ".docx";
 
             // get file
             DocumentCore dc = null;
@@ -90,11 +91,11 @@ namespace PDFConvertDocxRu.Services
             try
             {
                 dt = DateTime.Now;
-                dc.Save(outFile, options);
+                dc.Save(DocFileFullName, options);
             }
             catch (Exception ex)
             {
-                SetErrMsg($"File '{outFile}' save error: " + ex.Message);
+                SetErrMsg($"File '{DocFileFullName}' save error: " + ex.Message);
                 return false;
             }
             finally
@@ -102,16 +103,20 @@ namespace PDFConvertDocxRu.Services
                 SaveTime = DateTime.Now - dt;
             }
 
+            // delete SautinSoft watermark
+            //DocumentCore doc = DocumentCore.Load(outFile);
+            
+
             // Open the result for demonstation purposes.
             if (IsOpenAfterConverting)
             {
                 try
                 {
-                    System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(outFile) { UseShellExecute = true });
+                    System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(DocFileFullName) { UseShellExecute = true });
                 }
                 catch (Exception ex)
                 {
-                    SetErrMsg($"File '{outFile}' open error: " + ex.Message);
+                    SetErrMsg($"File '{DocFileFullName}' open error: " + ex.Message);
                     return false;
                 }
             }

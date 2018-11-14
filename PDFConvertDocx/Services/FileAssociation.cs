@@ -70,7 +70,7 @@ namespace PDFConvertDocxRu.Services
 
             // HKEY_CLASSES_ROOT\[progId]\shell\[menuItem]\command
             commandKey = GetRegKey(appProgIdKey, $"shell\\{menuItemName}\\command", true);
-            string keyValue = progFileFullName + " %1";
+            string keyValue = progFileFullName + " \"%1\"";
             // если нет такого ключа, то создаем с установкой значения по умолчанию
             if (commandKey == null)
             {
