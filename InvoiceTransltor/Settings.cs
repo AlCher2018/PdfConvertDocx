@@ -1,9 +1,9 @@
-﻿using PDFConvertDocxRu.Services;
+﻿using InvoiceTranslator.Services;
 using System;
 using System.IO;
 using System.Windows.Forms;
 
-namespace PDFConvertDocxRu
+namespace InvoiceTranslator
 {
     public partial class Settings : Form
     {

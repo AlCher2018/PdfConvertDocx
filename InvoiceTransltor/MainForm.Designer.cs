@@ -1,4 +1,4 @@
-﻿namespace PDFConvertDocxRu
+﻿namespace InvoiceTranslator
 {
     partial class MainForm
     {
@@ -61,7 +61,7 @@
             // 
             // openToolStripMenuItem
             // 
-            this.openToolStripMenuItem.Image = global::PDFConvertDocxRu.Properties.Resources.icons8_opened_folder_48;
+            this.openToolStripMenuItem.Image = global::InvoiceTranslator.Properties.Resources.icons8_opened_folder_48;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.openToolStripMenuItem.Text = "&Open...";
@@ -74,7 +74,7 @@
             // 
             // exitToolStripMenuItem
             // 
-            this.exitToolStripMenuItem.Image = global::PDFConvertDocxRu.Properties.Resources.icons8_exit_50;
+            this.exitToolStripMenuItem.Image = global::InvoiceTranslator.Properties.Resources.icons8_exit_50;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.exitToolStripMenuItem.Text = "E&xit";

@@ -8,7 +8,7 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
-namespace PDFConvertDocxRu.Services
+namespace InvoiceTranslator.Services
 {
     public static class AppConfig
     {

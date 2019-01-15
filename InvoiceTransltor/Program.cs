@@ -1,4 +1,4 @@
-﻿using PDFConvertDocxRu.Services;
+﻿using InvoiceTranslator.Services;
 using SautinSoft.Document;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SautinSoft.Document.Drawing;
 
-namespace PDFConvertDocxRu
+
+namespace InvoiceTranslator
 {
     static class Program
     {
@@ -26,11 +27,12 @@ namespace PDFConvertDocxRu
             if ((args != null) && (args.Length > 0))
             {
                 string filePath = args[0];
+
                 ConvertToDocx(filePath, null, null);
             }
             // интерактивный режим
-            else
-            {
+           else
+           {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new MainForm());
@@ -143,26 +145,26 @@ namespace PDFConvertDocxRu
 
         private static void RemoveTrialObjects()
         {
-            string fName = @"C:\Users\Leschenko.V\Source\Repos\PDFConvertDocx\PDFConvertDocx\bin\Debug\inFolder\NSE_1_Certificate.pdf";
-            string fNameResult = @"C:\Users\Leschenko.V\Source\Repos\PDFConvertDocx\PDFConvertDocx\bin\Debug\outFolder\NSE_1_Certificate.docx";
+            //string fName = @"C:\Users\Leschenko.V\Source\Repos\PDFConvertDocx\PDFConvertDocx\bin\Debug\inFolder\NSE_1_Certificate.pdf";
+            //string fNameResult = @"C:\Users\Leschenko.V\Source\Repos\PDFConvertDocx\PDFConvertDocx\bin\Debug\outFolder\NSE_1_Certificate.docx";
 
-            DocumentCore doc = DocumentCore.Load(fName);
-            // поиск блока с триальным текстом
-            List<Shape> shapes = doc.GetChildElements(true, new ElementType[] { ElementType.Shape }).Select(i => i as Shape).ToList();
-            //List<Shape> notContentShapes = new List<Shape>();
-            bool hasContent;
-            foreach (Shape shape in shapes)
-            {
-                hasContent = false;
-                if (shape.Content.ToString().StartsWith("Created by the trial version"))
-                {
-                    while (shape.Text.Blocks.Count > 0) shape.Text.Blocks.RemoveAt(0);
-                    //shape.Fill.SetEmpty();
-                    shape.Fill.SetSolid(new Color(0));
-                    hasContent = true;
-                }
-                //if (!hasContent) notContentShapes.Add(shape);
-            }
+            //DocumentCore doc = DocumentCore.Load(fName);
+            //// поиск блока с триальным текстом
+            //List<Shape> shapes = doc.GetChildElements(true, new ElementType[] { ElementType.Shape }).Select(i => i as Shape).ToList();
+            ////List<Shape> notContentShapes = new List<Shape>();
+            //bool hasContent;
+            //foreach (Shape shape in shapes)
+            //{
+            //    hasContent = false;
+            //    if (shape.Content.ToString().StartsWith("Created by the trial version"))
+            //    {
+            //        while (shape.Text.Blocks.Count > 0) shape.Text.Blocks.RemoveAt(0);
+            //        //shape.Fill.SetEmpty();
+            //        shape.Fill.SetSolid(new Color(0));
+            //        hasContent = true;
+            //    }
+            //    //if (!hasContent) notContentShapes.Add(shape);
+            //}
 
             //notContentShapes.ForEach(s => { s.Content.Delete(); });
 

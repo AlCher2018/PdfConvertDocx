@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace PDFConvertDocxRu.Services
+namespace InvoiceTranslator.Services
 {
     // SautinSoft - https://sautinsoft.com/index.php
     // https://sautinsoft.com/products/document/index.php?gclid=Cj0KCQiAlIXfBRCpARIsAKvManwZeM3q2amAdPrKhh-YT36ryfwfsh1tb4v74himar8zXMblsMgTo2UaAqSyEALw_wcB

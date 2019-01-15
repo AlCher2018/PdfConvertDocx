@@ -1,4 +1,4 @@
-﻿namespace PDFConvertDocxRu
+﻿namespace InvoiceTranslator
 {
     partial class Settings
     {
@@ -90,7 +90,7 @@
             // 
             // textBoxInFilesFolder
             // 
-            this.textBoxInFilesFolder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBoxInFilesFolder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxInFilesFolder.Location = new System.Drawing.Point(25, 47);
             this.textBoxInFilesFolder.Name = "textBoxInFilesFolder";
@@ -101,7 +101,7 @@
             // 
             this.cmdSelectFolderInFiles.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmdSelectFolderInFiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cmdSelectFolderInFiles.Image = global::PDFConvertDocxRu.Properties.Resources.icons8_more_24;
+            this.cmdSelectFolderInFiles.Image = global::InvoiceTranslator.Properties.Resources.icons8_more_24;
             this.cmdSelectFolderInFiles.Location = new System.Drawing.Point(344, 26);
             this.cmdSelectFolderInFiles.Name = "cmdSelectFolderInFiles";
             this.cmdSelectFolderInFiles.Size = new System.Drawing.Size(24, 19);
@@ -114,7 +114,7 @@
             // 
             this.cmdSelectFolderOutFiles.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmdSelectFolderOutFiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cmdSelectFolderOutFiles.Image = global::PDFConvertDocxRu.Properties.Resources.icons8_more_24;
+            this.cmdSelectFolderOutFiles.Image = global::InvoiceTranslator.Properties.Resources.icons8_more_24;
             this.cmdSelectFolderOutFiles.Location = new System.Drawing.Point(344, 87);
             this.cmdSelectFolderOutFiles.Name = "cmdSelectFolderOutFiles";
             this.cmdSelectFolderOutFiles.Size = new System.Drawing.Size(24, 19);
@@ -147,7 +147,7 @@
             // 
             // textBoxOutFilesFolder
             // 
-            this.textBoxOutFilesFolder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBoxOutFilesFolder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxOutFilesFolder.Location = new System.Drawing.Point(25, 108);
             this.textBoxOutFilesFolder.Name = "textBoxOutFilesFolder";

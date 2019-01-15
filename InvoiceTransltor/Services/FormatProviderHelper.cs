@@ -2,7 +2,7 @@
 using System.Globalization;
 
 
-namespace IntegraLib
+namespace InvoiceTranslator
 {
     public static class FormatProviderHelper
     {

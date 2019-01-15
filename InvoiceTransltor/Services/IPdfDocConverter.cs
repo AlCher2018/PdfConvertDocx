@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PDFConvertDocxRu.Services
+namespace InvoiceTranslator.Services
 {
     public interface IPdfDocConverter
     {
